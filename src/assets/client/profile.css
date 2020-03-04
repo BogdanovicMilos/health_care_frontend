@@ -1,0 +1,48 @@
+.client {
+  width: 200px;
+  position: relative;
+  border: 1px solid #72dffa;
+  border-radius: 10px;
+  height: 125px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.client .client-p {
+  position: relative;
+}
+
+.client .form {
+  position: absolute;
+  left: 250px;
+  top: 15px;
+  border-radius: 10px;
+  width: 500px;
+  height: 180px;
+}
+
+.client .form .address {
+  position: absolute;
+  left: 0px;
+  padding: 5px;
+}
+
+.client .form .address .address-input {
+  left: 100px;
+  border: 1px solid rgba(78, 190, 241, 0.548);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.client .form .submit {
+  position: absolute;
+  top: 50px;
+  left: 108px;
+  padding: 5px;
+}
+
+.client .form .submit .btn {
+  width: 156px;
+  color: white;
+}
+/*# sourceMappingURL=profile.css.map */

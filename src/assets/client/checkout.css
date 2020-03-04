@@ -1,0 +1,63 @@
+.CardElement {
+  height: 40px;
+  padding: 10px 12px;
+  width: 400px;
+  color: #32325d;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px 0 #e6ebf1;
+          box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  -webkit-transition: -webkit-box-shadow 150ms ease;
+  transition: -webkit-box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease, -webkit-box-shadow 150ms ease;
+}
+
+.mainCardDiv {
+  margin: 0 auto;
+  height: 200px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.CardElement--focus {
+  -webkit-box-shadow: 0 1px 3px 0 #cfd7df;
+          box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.CardElement--invalid {
+  border-color: #fa755a;
+}
+
+.CardElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.btn-checkout {
+  margin: 10px auto;
+  border-radius: 4px;
+  left: -5px;
+  height: 40px;
+  top: 25px;
+  width: 25%;
+  color: white;
+  background-color: rgba(4, 137, 245, 0.616);
+}
+
+.btn-checkout :hover {
+  background-color: blue;
+}
+/*# sourceMappingURL=checkout.css.map */

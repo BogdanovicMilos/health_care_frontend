@@ -1,77 +1,121 @@
-
-.doctor{
-    width: 200px;
-    position: relative;
-    border: 1px solid rgb(114, 223, 250);
-    border-radius: 10px;
-    height: 180px;
-    margin: 10px;
-    padding: 5px;
-
-    .doctor-p{
+.mainprof {
+  display: flex;
+  flex-direction: column;
+  .doctor {
+    display: flex;
+    width: 100%;
+    .imginput {
+      margin-right: 30px;
+      .doctor-p {
         position: relative;
-    }
-
-    .form{
-        position: absolute;
-        left: 250px;
-        top: 0px;
+        width: 200px;
+        border: 1px solid rgb(185, 183, 183);
         border-radius: 10px;
-        width: 500px;
         height: 180px;
-        
-        .prefix{
-            position: absolute;
-            left: 0px;
-            padding: 5px;
+        padding: 5px;
 
-            .prefix-input{
-                left: 100px;
-                border: 1px solid rgba(78, 190, 241, 0.548);
-                border-radius: 5px;
-                padding: 5px;
-            }
+        p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
         }
-
-        .description{
-            position: absolute;
-            left: 180px;
-            padding: 5px;
-            grid-row: 5;
-
-            .description-input{
-                height: 135px;
-                left: 235px;
-                border: 1px solid rgba(78, 190, 241, 0.548);
-                border-radius: 5px;
-                padding: 5px;
-            }
-        }
-
-        .price{
-            position: absolute;
-            top: 50px;
-            left: 0px;
-            padding: 5px;
-
-            .price-input{
-                left: 100px;
-                border: 1px solid rgba(78, 190, 241, 0.548);
-                border-radius: 5px;
-                padding: 5px;
-            }
-        }
-
-        .submit{
-            position: absolute;
-            top: 100px;
-            left: 0px;
-            padding: 5px;
-
-            .btn{
-                width: 156px;
-                color: white;
-            }
-        }
+      }
+      input {
+        margin: 8px 0;
+        width: 130px;
+        border-radius: 5px;
+      }
     }
+
+    .info {
+      border-radius: 10px;
+      padding: 5px;
+      width: 50%;
+      text-align: start;
+      p {
+        text-indent: 10px;
+        color: rgb(11, 11, 156);
+        border-bottom: 1px solid blue;
+      }
+    }
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .form {
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+
+    .description {
+      margin: 20px 0 0 0;
+      display: flex;
+
+      .description-input {
+        height: 135px;
+        width: 815px;
+        border: 1px solid rgba(145, 147, 148, 0.548);
+        border-radius: 5px;
+        padding: 5px;
+        float: left;
+      }
+    }
+
+    .pref-price {
+      display: flex;
+      justify-content: flex-start;
+
+      @media (max-width: 600px) {
+        flex-direction: column;
+      }
+
+      .prefix {
+        margin-right: 5px;
+
+        .prefix-input {
+          width: 200px;
+          left: 100px;
+          border: 1px solid rgba(158, 158, 158, 0.548);
+          border-radius: 5px;
+          padding: 5px;
+          height: 38px;
+        }
+      }
+
+      .price {
+        align-self: center;
+        margin-left: 5px;
+
+        .price-input {
+          width: 200px;
+          height: 38px;
+
+          border: 1px solid rgba(155, 155, 155, 0.548);
+          border-radius: 5px;
+          padding: 5px;
+        }
+      }
+    }
+
+    .submit {
+      padding: 0;
+      margin-top: 20px;
+      .btn {
+        width: 156px;
+        color: white;
+        float: left;
+        background: rgb(0, 191, 255);
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background: rgb(3, 122, 161);
+          box-shadow: 2px 2px 2px black;
+        }
+      }
+    }
+  }
 }

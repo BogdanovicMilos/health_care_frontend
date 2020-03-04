@@ -1,0 +1,78 @@
+.doctor {
+  width: 200px;
+  position: relative;
+  border: 1px solid #72dffa;
+  border-radius: 10px;
+  height: 180px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.doctor .doctor-p {
+  position: relative;
+}
+
+.doctor .form {
+  position: absolute;
+  left: 250px;
+  top: 0px;
+  border-radius: 10px;
+  width: 500px;
+  height: 180px;
+}
+
+.doctor .form .prefix {
+  position: absolute;
+  left: 0px;
+  padding: 5px;
+}
+
+.doctor .form .prefix .prefix-input {
+  left: 100px;
+  border: 1px solid rgba(78, 190, 241, 0.548);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.doctor .form .description {
+  position: absolute;
+  left: 180px;
+  padding: 5px;
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+.doctor .form .description .description-input {
+  height: 135px;
+  left: 235px;
+  border: 1px solid rgba(78, 190, 241, 0.548);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.doctor .form .price {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  padding: 5px;
+}
+
+.doctor .form .price .price-input {
+  left: 100px;
+  border: 1px solid rgba(78, 190, 241, 0.548);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.doctor .form .submit {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  padding: 5px;
+}
+
+.doctor .form .submit .btn {
+  width: 156px;
+  color: white;
+}
+/*# sourceMappingURL=doctor_profile.css.map */

@@ -1,0 +1,46 @@
+.exam {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.exam .mainExam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.exam .exam-spec {
+  width: 300px;
+  margin: 0 10px 10px 0;
+}
+
+.exam .exam-doc {
+  width: 300px;
+  margin-right: 10px;
+}
+
+.exam .exam-sub {
+  width: 490px;
+}
+
+.exam .exam-mess {
+  height: 200px;
+}
+
+.exam .exam-mess .form-control {
+  height: 200px;
+}
+
+.exam #subject {
+  height: 38px;
+}
+
+.exam .btn {
+  left: 500px;
+  margin: 10px auto;
+}
+
+.exam .btn .submit-link {
+  color: white;
+}
+/*# sourceMappingURL=exam-form.css.map */

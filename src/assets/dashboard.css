@@ -1,0 +1,70 @@
+.table1 {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 75%;
+}
+
+.table1 .dthead {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.table1 .dthead .dtrow .d-client {
+  text-align: center;
+}
+
+.table1 .dthead .dtrow .subject {
+  text-align: center;
+}
+
+.table1 .dthead .dtrow .created {
+  text-align: center;
+}
+
+.table1 .dthead .dtrow .status {
+  text-align: center;
+}
+
+.table1 .tbody :hover {
+  background-color: #ddd;
+}
+
+.table1 .tbody .list-group {
+  border: 1px solid #ddd;
+  padding-top: 8px;
+}
+
+.table1 .tbody .list-group .d-client {
+  padding: 10px;
+}
+
+.table1 .tbody .list-group .subject {
+  padding: 10px;
+}
+
+.table1 .tbody .list-group .created {
+  padding: 10px;
+}
+
+.table1 .tbody .list-group .status {
+  padding: 10px;
+}
+
+.row2 {
+  width: 200px;
+  position: relative;
+  top: -600px;
+  left: -15px;
+  float: right;
+}
+
+.row2 .list-group {
+  position: relative;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=dashboard.css.map */

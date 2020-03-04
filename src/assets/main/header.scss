@@ -1,18 +1,15 @@
-.container{
-    position: relative;
-    width: 70%;
+.container {
+  position: relative;
+  width: 70%;
 
-    .name{
-        position: absolute;
-        width: 150px;
-        color: white;
-        left: 1px;
-        top: -10px;
-        
-        .name-link{
-            color: white;
-            text-decoration: none;
-        }
+  .name {
+    display: inline-block;
+    float: left;
+    width: 150px;
+
+    .name-link {
+      color: rgb(0, 191, 255);
+      text-decoration: none;
     }
-    
+  }
 }

@@ -1,0 +1,17 @@
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+}
+
+.nav .li-reg .register {
+  color: white;
+  background-color: transparent;
+}
+
+.nav .li-log .login {
+  color: white;
+  background-color: transparent;
+}
+/*# sourceMappingURL=navbar.css.map */

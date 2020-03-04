@@ -1,19 +1,42 @@
-.CardElement{
-    top: 15px;
-    position: relative;
-    left: 625px;
-    height: 40px;
-    padding: 10px 12px;
-    width: 25%;
-    color: #32325d;
-    background-color: white;
-    border: 1px solid transparent;
-    border-radius: 4px;
+.App {
+  position: relative;
+  transition: all 1s ease-in-out;
+}
 
-    box-shadow: 0 1px 3px 0 #e6ebf1;
-    -webkit-transition: box-shadow 150ms ease;
-    transition: box-shadow 150ms ease;
-    }
+.CardElement {
+  // top: 15px;
+  // position: relative;
+  // left: 625px;
+  height: 40px;
+  padding: 10px 12px;
+  width: 400px;
+  color: #32325d;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 0 auto;
+
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.mainCardDiv {
+  position: absolute;
+  z-index: 20;
+  // margin: 0 auto;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
 
 .CardElement--focus {
   box-shadow: 0 1px 3px 0 #cfd7df;
@@ -27,13 +50,17 @@
   background-color: #fefde5 !important;
 }
 
-.btn-checkout{
-    border-radius: 4px;
-    position: relative;
-    left: -5px;
-    height: 40px;
-    top: 25px;
-    width: 25%;
-    color: white;
-    background-color: rgba(4, 137, 245, 0.616);
+.btn-checkout {
+  margin: 10px auto;
+  border-radius: 4px;
+  left: -5px;
+  height: 40px;
+  top: 25px;
+  width: 400px;
+  color: white;
+  background-color: rgb(0, 191, 255);
+
+  &:hover {
+    background-color: rgb(5, 166, 219);
+  }
 }

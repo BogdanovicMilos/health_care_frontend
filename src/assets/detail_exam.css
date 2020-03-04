@@ -1,0 +1,45 @@
+.detail-exam {
+  border: 1px solid rgba(240, 108, 47, 0.349);
+  border-radius: 10px;
+  position: relative;
+  padding: 10px;
+  top: 2px;
+  float: left;
+}
+
+.detail-exam .detail {
+  position: relative;
+}
+
+.detail-exam .detail .col-sm-10 {
+  position: relative;
+  height: 50px;
+}
+
+.detail-exam .detail .col-sm-10 .btn {
+  position: relative;
+  border: 1px solid #41a6e1;
+  height: 37px;
+  left: 120px;
+  top: -37px;
+}
+
+.detail-exam .detail .messages-link {
+  border: 1px solid silver;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: snow;
+  -webkit-text-decoration: rgba(238, 64, 20, 0.548);
+          text-decoration: rgba(238, 64, 20, 0.548);
+}
+
+.detail-exam .detail .message-link {
+  border: 1px solid silver;
+  margin-left: 5px;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: snow;
+  -webkit-text-decoration: rgba(238, 64, 20, 0.548);
+          text-decoration: rgba(238, 64, 20, 0.548);
+}
+/*# sourceMappingURL=detail_exam.css.map */

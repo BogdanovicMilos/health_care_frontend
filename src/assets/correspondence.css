@@ -1,0 +1,37 @@
+.correspondence {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+}
+
+.correspondence .tbody {
+  position: relative;
+  width: 10px;
+  border: 1px solid #ddd;
+}
+
+.correspondence .tbody .row1 {
+  position: relative;
+  width: 5px;
+}
+
+.correspondence .tbody .row1 .sender {
+  position: relative;
+  width: 10px;
+  padding: 10px;
+}
+
+.correspondence .tbody .row1 .message {
+  padding: 10px;
+}
+
+.correspondence .tbody .row1 .created {
+  padding: 10px;
+}
+
+.correspondence .tbody .row1 .attachments {
+  padding: 10px;
+}
+/*# sourceMappingURL=correspondence.css.map */

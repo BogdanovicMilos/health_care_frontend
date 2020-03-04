@@ -1,0 +1,101 @@
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid white;
+  margin-top: 30px;
+  background: transparent;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-footer .footer-name-link {
+  color: white;
+}
+
+.mainFooter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.logo h1 {
+  margin-left: 10px;
+  color: white;
+  font-size: large;
+  list-style: none;
+}
+
+.logo p {
+  color: white;
+  margin-top: 20px;
+}
+
+.insta,
+.facebook,
+.twitter {
+  height: 30px;
+  width: 30px;
+  color: white;
+  margin-top: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.insta:hover,
+.facebook:hover,
+.twitter:hover {
+  color: pink;
+}
+
+.mainFooter ul {
+  color: white;
+}
+
+.mainFooter ul h3 {
+  font-size: large;
+  color: pink;
+}
+
+.mainFooter ul li {
+  margin-top: 30px;
+  list-style: none;
+  color: white;
+}
+
+.homeClass,
+.aboutClass,
+.contactClass {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.homeClass:hover,
+.aboutClass:hover,
+.contactClass:hover {
+  color: pink;
+  text-decoration: none;
+}
+/*# sourceMappingURL=footer.css.map */

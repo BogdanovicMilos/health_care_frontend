@@ -1,46 +1,48 @@
-.exam{
-    position: relative;
-    top: 200px;
-        
-    .exam-spec{
-        position: absolute;
-        left: 1px;
-        width: 300px;
+.exam {
+  width: 100%;
+  margin-top: 50px;
+
+  .mainExam {
+    display: flex;
+  }
+
+  .exam-spec {
+    width: 300px;
+    margin: 0 10px 10px 0;
+  }
+
+  .exam-doc {
+    width: 300px;
+    margin-right: 10px;
+  }
+
+  .exam-sub {
+    width: 490px;
+  }
+
+  .exam-mess {
+    height: 200px;
+
+    .form-control {
+      height: 200px;
     }
+  }
 
-    .exam-doc{
-        position: absolute;
-        left: 325px;
-        top: 1px;
-        width: 300px;
+  #subject {
+    height: 38px;
+  }
+
+  .btn {
+    margin: 10px auto;
+    color: white;
+    background: rgb(0, 191, 255);
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background: rgb(1, 111, 148);
+      box-shadow: 2px 2px 2px black;
     }
-
-    .exam-sub{
-        position: absolute;
-        left: 650px;
-        top: 1px;
-        width: 490px;
-    }
-
-    .exam-mess{
-        position: absolute;
-        left: 1px;
-        top: 50px;
-        width: 1135px;
-        height: 200px;
-
-        .form-control{
-            height: 200px;
-        }
-    }
-
-    .btn{
-        left: 500px;
-        position: absolute;
-        top: 260px;
-
-        .submit-link{
-            color: white;
-        }
-    }
+    // .submit-link {
+    //   color: white;
+    // }
+  }
 }

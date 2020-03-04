@@ -1,0 +1,18 @@
+.container {
+  position: relative;
+  width: 70%;
+}
+
+.container .name {
+  position: absolute;
+  width: 150px;
+  color: white;
+  left: 1px;
+  top: -10px;
+}
+
+.container .name .name-link {
+  color: white;
+  text-decoration: none;
+}
+/*# sourceMappingURL=header.css.map */

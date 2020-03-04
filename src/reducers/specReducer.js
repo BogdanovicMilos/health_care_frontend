@@ -1,10 +1,8 @@
-import {
-    SPEC_OBJ
-} from '../constants/examConstants';
-import Immutable from 'immutable';
+import { SPEC_OBJ } from "../constants/examConstants";
+import Immutable from "immutable";
 
 const initialState = Immutable.fromJS({
-    spec: '',
+  spec: ""
 });
 
 /**
@@ -14,10 +12,10 @@ const initialState = Immutable.fromJS({
  * @returns {*}
  */
 export default (state = initialState, action) => {
-    switch (action.type) {
-        case SPEC_OBJ:
-            return state.set('spec', action.spec)
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case SPEC_OBJ:
+      return state.set("spec", action.spec);
+    default:
+      return state;
+  }
 };

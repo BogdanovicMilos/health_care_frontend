@@ -1,10 +1,8 @@
-import {
-    EXAM_ID
-} from '../constants/examConstants';
-import Immutable from 'immutable';
+import { EXAM_ID } from "../constants/examConstants";
+import Immutable from "immutable";
 
 const initialState = Immutable.fromJS({
-    examID: [],
+  examID: null
 });
 
 /**
@@ -14,10 +12,10 @@ const initialState = Immutable.fromJS({
  * @returns {*}
  */
 export default (state = initialState, action) => {
-    switch (action.type) {
-        case EXAM_ID:
-            return state.set('examID', action.exam)
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case EXAM_ID:
+      return state.set("examID", action.exam);
+    default:
+      return state;
+  }
 };

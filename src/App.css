@@ -1,10 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  position: absolute;
-  height: 1500px;
+  /* position: absolute; */
+  min-height: 100vh;
   width: 100%;
   text-align: center;
-  background: linear-gradient(rgba(14, 233, 241, 0.719),transparent);
-  background-color: rgba(37, 14, 241, 0.719);
+  background: linear-gradient(white, white, white, rgba(14, 233, 241, 0.719));
+}
+
+.head {
+  color: rgb(0, 191, 255);
+}
+
+.clientLabel,
+.doctorLabel {
+  color: gray;
+}
+
+.clientLabel {
+  margin-right: 30px;
 }
 
 .App-logo {

@@ -1,0 +1,49 @@
+.client-form {
+  margin: 5px 0;
+  color: white;
+}
+
+.nav-doctor h6 {
+  color: white;
+  font-size: 16px;
+}
+
+.mainMessage {
+  text-align: left;
+}
+
+.mainMessage .input .form-control {
+  width: 100%;
+}
+
+.mainMessage .input .file {
+  margin: 10px 0;
+}
+
+.input {
+  position: relative;
+}
+
+.input .form-control {
+  position: relative;
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+.input .btn {
+  margin-top: 5px;
+  position: relative;
+  float: left;
+  width: 200px;
+}
+
+.attachment {
+  width: 200px;
+  margin: 5px;
+  text-align: left;
+  position: relative;
+  height: 80px;
+  padding: 5px;
+  border: 1px solid rgba(33, 201, 243, 0.658);
+}
+/*# sourceMappingURL=message.css.map */

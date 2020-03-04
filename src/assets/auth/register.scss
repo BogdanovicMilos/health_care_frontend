@@ -1,33 +1,37 @@
-.register-form{
+.register-form {
+  width: 300px;
+  margin: 30px auto;
+
+  .form-control {
+    margin: 3px;
+  }
+
+  .gender {
     position: relative;
-    left: 425px;
-    top: 225px;
-    width: 25%;
+    left: 3px;
+  }
 
-    .form-control{
-        margin: 3px;
+  .spec {
+    position: relative;
+    left: 3px;
+  }
+
+  .register-button {
+    position: relative;
+    width: 100px;
+    left: 100px;
+    margin-top: 5px;
+
+    .btn {
+      position: relative;
+      width: 100px;
+      color: white;
+      background: rgb(0, 191, 255);
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background: rgb(1, 111, 148);
+        box-shadow: 2px 2px 2px black;
+      }
     }
-
-    .gender{
-        position: relative;
-        left: 3px;
-    }
-
-    .spec{
-        position: relative;
-        left: 3px;
-    }
-
-    .register-button{
-        position: relative;
-        width: 100px;
-        left: 100px;
-        margin-top: 5px;
-        
-        .btn{
-            position: relative;
-            width: 100px;
-
-        }
-    }
+  }
 }

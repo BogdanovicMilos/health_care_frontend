@@ -1,40 +1,39 @@
-.detail-exam{
-    border: 1px solid rgba(47, 240, 224, 0.349);
-    border-radius: 10px;
+.detail-exam {
+  border: 1px solid rgba(47, 240, 224, 0.349);
+  border-radius: 10px;
+  position: relative;
+  padding: 10px;
+  top: 2px;
+  float: left;
+
+  .detail {
     position: relative;
-    padding: 10px;
-    top: 2px;
-    float: left;
 
-    .detail{
+    .col-sm-10 {
+      position: relative;
+      height: 50px;
+
+      .btn {
         position: relative;
-
-        .col-sm-10{
-            position: relative;
-            height: 50px;
-
-            .btn{
-                position: relative;
-                border: 1px solid rgb(65, 166, 225);
-                height: 37px;
-                left: 120px;
-                top: -37px;
-            }
-        } 
-        .messages-link{
-            border: 1px solid silver;
-            padding: 6px;
-            border-radius: 8px;
-            background-color: snow;
-            text-decoration: rgba(238, 64, 20, 0.548);
-        }
-        .message-link{
-            border: 1px solid silver;
-            margin-left: 5px;
-            padding: 6px;
-            border-radius: 8px;
-            background-color: snow;
-            text-decoration: rgba(238, 64, 20, 0.548);
-        }
+        border: 1px solid rgb(65, 166, 225);
+        height: 37px;
+        left: 120px;
+        top: -37px;
+      }
     }
+    .messages-link,
+    .message-link {
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 8px;
+      background-color: snow;
+      margin: 5px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        background: rgb(233, 231, 231);
+        border: 1px solid snow;
+      }
+    }
+  }
 }

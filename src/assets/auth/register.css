@@ -1,0 +1,31 @@
+.register-form {
+  width: 300px;
+  margin: 30px auto;
+}
+
+.register-form .form-control {
+  margin: 3px;
+}
+
+.register-form .gender {
+  position: relative;
+  left: 3px;
+}
+
+.register-form .spec {
+  position: relative;
+  left: 3px;
+}
+
+.register-form .register-button {
+  position: relative;
+  width: 100px;
+  left: 100px;
+  margin-top: 5px;
+}
+
+.register-form .register-button .btn {
+  position: relative;
+  width: 100px;
+}
+/*# sourceMappingURL=register.css.map */

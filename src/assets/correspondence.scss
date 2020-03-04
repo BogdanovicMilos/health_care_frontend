@@ -1,39 +1,41 @@
+.correspondence {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+  margin-top: 20px;
 
-.correspondence{
-    text-align: center;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    border: 3px solid #ddd;
-    width: 100%;
+  .tbody {
+    position: relative;
+    width: 10px;
+    border: 1px solid #ddd;
 
-    .tbody{
+    .row1 {
+      position: relative;
+      width: 5px;
+
+      .sender {
         position: relative;
         width: 10px;
-        border: 1px solid #ddd;
+        padding: 10px;
+      }
 
-        .row1{
-            position: relative;
-            width: 5px;
-            
-            .sender{
-                position: relative;
-                width: 10px;
-                padding: 10px;
-            }
+      .message {
+        padding: 10px;
+        color: rgb(0, 191, 255);
+      }
 
-            .message{
-                padding: 10px;
-            }
-
-            .created{
-                padding: 10px;
-            }
-            
-            .attachments{
-                padding: 10px;
-            }
-        }
+      .created {
+        padding: 10px;
+      }
     }
+    .attachments {
+      padding: 10px;
 
-    
+      .att {
+        color: rgb(0, 191, 255);
+      }
+    }
+  }
 }

@@ -1,11 +1,104 @@
-.page-footer{
-    position: relative;
-    width: 100%;
-    border-top: 1px solid white;
-    position: relative;
-    bottom: -400px;
+.page-footer {
+  height: 120px;
+  width: 100%;
+  border-top: 1px solid white;
+  background: rgb(216, 214, 214);
+  position: fixed;
+  bottom: 0;
 
-    .footer-name-link{
-        color: white;
+  .footer-name-link {
+    color: white;
+  }
+}
+
+.mainFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.mainLogo {
+  h1 {
+    margin-left: 10px;
+    color: white;
+    font-size: large;
+  }
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.logo p {
+  color: white;
+  margin-top: 5px;
+}
+
+.insta,
+.facebook,
+.twitter {
+  height: 30px;
+  width: 30px;
+  color: white;
+  margin-top: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.insta:hover,
+.facebook:hover,
+.twitter:hover {
+  color: rgb(0, 191, 255);
+}
+
+.mainFooter ul {
+  color: white;
+}
+
+.mainFooter ul h3 {
+  font-size: large;
+  color: black;
+}
+
+.mainFooter ul li {
+  margin-top: 5px;
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.homeClass,
+.aboutClass,
+.contactClass {
+  span {
+    color: white;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      color: rgb(0, 191, 255);
     }
+  }
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainFooter {
+    // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }

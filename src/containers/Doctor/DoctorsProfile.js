@@ -1,47 +1,45 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 import "../../assets/main/main.scss";
-import DProfile from '../../components/Doctor/DoctorsProfile';
-import { connect } from 'react-redux';
-
+import DProfile from "../../components/Doctor/DoctorsProfile";
 
 class DoctorProfile extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          doctor: [],
-          token: sessionStorage.getItem('accessToken')
-        };
-    }
-
-    hanldeDoctorsProfile = () => {
-        const access_token = 'Bearer '.concat(this.state.token)
-        axios.get(`http://0.0.0.0:8000/api/doctor/profile/${this.props.doctor}`, { headers: { Authorization: access_token }})
-              .then(response => {
-                  return this.setState({doctor: Object.values(response.data)})
-        })
-    }
-
-    componentDidMount() {
-        this.hanldeDoctorsProfile()
-        
-    }
-
-    render() {
-        console.log(this.state.doctors)
-        return (
-            <div className="container">
-                <DProfile doctor={this.state.doctor}/>
-            </div>
-        )
-    }
-}
-
-const mapStateToProps = state => {
-    const doctor = state.getIn(['doctorReducer', 'doctor']);
-    return {
-        doctor,
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      doctor: [],
+      token: sessionStorage.getItem("accessToken"),
+      id: this.props.match.params.id
+    };
   }
 
-export default connect(mapStateToProps)(DoctorProfile);
+  hanldeDoctorsProfile = () => {
+    const access_token = "Bearer ".concat(this.state.token);
+    axios
+      .get(
+        `https://health-care-backend.herokuapp.com/api/client/doc/${this.state.id}`,
+        {
+          headers: { Authorization: access_token }
+        }
+      )
+      .then(response => {
+        console.log(response, "doc profile");
+
+        return this.setState({ doctor: [response.data.data] });
+      });
+  };
+
+  componentDidMount() {
+    this.hanldeDoctorsProfile();
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <DProfile doctor={this.state.doctor} />
+      </div>
+    );
+  }
+}
+
+export default DoctorProfile;

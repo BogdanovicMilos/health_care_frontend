@@ -1,0 +1,29 @@
+.mainClientsDiv {
+  width: 100%;
+  margin: 30px auto;
+  .clientsDiv {
+    display: flex;
+    justify-content: space-between;
+    h4 {
+      text-indent: 10px;
+      color: rgb(0, 191, 255);
+      margin: 30px 0;
+    }
+    label {
+      align-self: center;
+    }
+  }
+
+  .row2 {
+    .list-group {
+      box-shadow: none;
+
+      .list-group-item {
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background: lightblue;
+        }
+      }
+    }
+  }
+}

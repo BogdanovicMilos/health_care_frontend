@@ -1,53 +1,147 @@
-.container{
-    height: 800px;
+.container {
+  padding: 0;
 
-    .row{
-        top: 100px;
-        left: 1px;
-        position: relative;
-        width: 50%;
+  .row {
+    .topSpecialities {
+      h2 {
+        color: rgb(0, 191, 255);
+        margin: 30px;
+      }
+      .spec {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 10px;
+        justify-content: space-between;
+        margin: 30px;
 
-        .doctor-panel{
+        .eatchSpec {
+          border: 1px solid rgb(235, 235, 235);
+          background: rgb(247, 246, 246);
+          border-radius: 10px;
+          width: 100%;
+          text-align: center;
+          height: 100px;
+          box-shadow: 2px 2px 5px gray;
+
+          div {
+            height: 100%;
             position: relative;
-            border-radius: 4px;
-            width: 400px;
-            height: 100px;
-            margin-left: 0px;
-            padding: 5em;
-            padding-top: 8px;
-            margin-bottom: 3px;
-            background-color: rgba(221, 219, 231, 0.452);
+          }
 
-            .doc-panel{
-                position: relative;
-                left: -20px;
-                top: 1px;
-            }
-
-            .doc-profile{
-                position: relative;
-             
-
-                .btn {
-                    position: absolute;
-                    color: white;
-                    top: -85px;
-                    left: 215px;
-                    width: 105px;
-                }
-            }   
-            
-            .doc-consultation{
-
-                .btn {
-                    position: absolute;
-                    color: white;
-                    top: 55px;
-                    left: 285px;
-        
-                }
-            }
-            
+          h3 {
+            position: absolute;
+            margin: 0 auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
+      }
     }
+
+    .RowsClients {
+      margin: 40px auto;
+      h2 {
+        color: rgb(0, 191, 255);
+        margin-bottom: 30px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .headers {
+      display: flex;
+      @media (max-width: 900px) {
+        flex-direction: column;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .headersInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .headersImages {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .allDoctors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 10px;
+
+      .doctor-panel {
+        width: 250px;
+        // position: relative;
+        border-radius: 4px;
+        padding: 5em;
+        padding-top: 8px;
+        margin: 0 auto;
+        background-color: rgba(221, 219, 231, 0.452);
+        border-radius: 10px;
+
+        .doc-panel {
+          margin-top: 20px;
+          width: 100%;
+        }
+
+        .doc-profile {
+          .btn {
+            color: white;
+            top: -85px;
+            left: 215px;
+            width: 105px;
+            margin-bottom: 5px;
+          }
+        }
+
+        .doc-consultation {
+          .btn {
+            color: white;
+            top: 55px;
+            left: 285px;
+            border: 1px solid rgb(4, 156, 207);
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  .doctor {
+    border-radius: 5px;
+
+    .rounded-pill {
+      width: 50%;
+      text-align: left;
+      padding: 5px;
+
+      p {
+        border-bottom: 1px solid rgb(29, 29, 150);
+        color: rgb(29, 29, 150);
+        text-indent: 10px;
+      }
+    }
+  }
+  // height: 100vh;
+  margin-bottom: 120px;
 }

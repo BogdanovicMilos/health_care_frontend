@@ -1,0 +1,49 @@
+.container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.container .row {
+  top: 100px;
+  left: 1px;
+  position: relative;
+  width: 50%;
+}
+
+.container .row .doctor-panel {
+  position: relative;
+  border-radius: 4px;
+  width: 400px;
+  height: 100px;
+  margin-left: 0px;
+  padding: 5em;
+  padding-top: 8px;
+  margin-bottom: 3px;
+  background-color: rgba(221, 219, 231, 0.452);
+}
+
+.container .row .doctor-panel .doc-panel {
+  position: relative;
+  left: -20px;
+  top: 1px;
+}
+
+.container .row .doctor-panel .doc-profile {
+  position: relative;
+}
+
+.container .row .doctor-panel .doc-profile .btn {
+  position: absolute;
+  color: white;
+  top: -85px;
+  left: 215px;
+  width: 105px;
+}
+
+.container .row .doctor-panel .doc-consultation .btn {
+  position: absolute;
+  color: white;
+  top: 55px;
+  left: 285px;
+}
+/*# sourceMappingURL=main.css.map */

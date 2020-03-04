@@ -1,49 +1,62 @@
+.mainClien {
+  display: flex;
+  flex-direction: column;
 
-.client{
-    width: 200px;
-    position: relative;
-    border: 1px solid rgb(114, 223, 250);
+  .client {
+    width: 50%;
     border-radius: 10px;
-    height: 125px;
-    margin: 10px;
-    padding: 5px;
+    margin: 20px 0 20px 0;
+    float: left;
 
-    .client-p{
-        position: relative;
+    .client-p {
+      p {
+        text-align: left;
+        text-indent: 10px;
+        color: rgb(24, 24, 138);
+        margin: 5px;
+        border-bottom: 1px solid rgb(20, 20, 158);
+      }
+    }
+  }
+
+  .form {
+    left: 250px;
+    top: 15px;
+    display: flex;
+
+    border-radius: 10px;
+    width: 500px;
+    height: 180px;
+
+    .address {
+      left: 0px;
+      padding: 5px;
+
+      .address-input {
+        left: 100px;
+        border: 1px solid rgba(78, 190, 241, 0.548);
+        border-radius: 5px;
+        padding: 5px;
+      }
     }
 
-    .form{
-        position: absolute;
-        left: 250px;
-        top: 15px;
+    .submit {
+      top: 50px;
+      left: 108px;
+      padding: 5px;
 
-        border-radius: 10px;
-        width: 500px;
-        height: 180px;
-        
-        .address{
-            position: absolute;
-            left: 0px;
-            padding: 5px;
-
-            .address-input{
-                left: 100px;
-                border: 1px solid rgba(78, 190, 241, 0.548);
-                border-radius: 5px;
-                padding: 5px;
-            }
+      .btn {
+        width: 156px;
+        color: white;
+        background: rgb(0, 187, 250);
+        transition: all 0.5s ease-in-out;
+        border: none;
+        margin: 0;
+        &:hover {
+          background: rgb(1, 113, 150);
+          box-shadow: 2px 2px 2px black;
         }
-
-        .submit{
-            position: absolute;
-            top: 50px;
-            left: 108px;
-            padding: 5px;
-
-            .btn{
-                width: 156px;
-                color: white;
-            }
-        }
+      }
     }
+  }
 }

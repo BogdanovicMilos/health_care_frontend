@@ -1,22 +1,25 @@
-.login-form{
-    position: relative;
-    width: 300px;
-    left: 400px;
-    top: 300px;
+.login-form {
+  width: 300px;
+  margin: 200px auto;
 
-    .form-control{
-        margin: 3px;
-    }
+  .form-control {
+    margin: 3px;
+  }
 
-    .login-button{
-        position: relative;
-        width: 100px;
-        left: 105px;
-        margin: 5px;
-        
-        .btn{
-            position: relative;
-            width: 100px;
-        }
+  .login-button {
+    width: 100%;
+    margin: 5px 0;
+
+    .btn {
+      position: relative;
+      width: 100px;
+      color: white;
+      background: rgb(0, 191, 255);
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background: rgb(1, 111, 148);
+        box-shadow: 2px 2px 2px black;
+      }
     }
+  }
 }
