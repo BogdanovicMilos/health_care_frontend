@@ -23,7 +23,8 @@ class DetailExam extends Component {
         const access_token = 'Bearer '.concat(this.state.token)
         axios.get(`http://0.0.0.0:8000/api/doctor/exams/${this.props.examID}/`, { headers: { Authorization: access_token }})
           .then(response => {
-            this.setState({exam: Object.values(response.data)})
+              console.log(response)
+            this.setState({exam: Object.values(response.data.data)})
           })
     }
 

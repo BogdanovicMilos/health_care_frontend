@@ -41,7 +41,8 @@ class Main extends Component {
     componentDidMount() {
         axios.get('http://0.0.0.0:8000/api/doctor/list', { headers: { Authorization: access_token }})
           .then(response => {
-            const res = response.data.message.map((val) => {
+            console.log(response)
+            const res = response.data.data.map((val) => {
               return {id: val.id, doctor: val.doctor, speciality: val.speciality, price: val.price}
             });
             this.setState({ doctors: res });

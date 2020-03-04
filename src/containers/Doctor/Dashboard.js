@@ -21,25 +21,29 @@ class DoctorDashboard extends Component {
 
     exams = () => {
         const access_token = 'Bearer '.concat(this.state.token)
-        axios.get('http://0.0.0.0:8000/api/doctor/exams/', { headers: { Authorization: access_token }})
+        axios.get('http://127.0.0.1:8000/api/doctor/exams/', { headers: { Authorization: access_token }})
           .then(response => {
-            const res = response.data.message.map((val) => {
+            console.log(response, 'resssss')
+            const res = response.data.results.map((val) => {
               return {exam: val.id, client: val.client, created: val.created, subject: val.subject, status: val.status}
             });
+            console.log(res, 'e')
             this.setState({exams: res})
         })
     }
 
-    clients = () => {
-        const access_token = 'Bearer '.concat(this.state.token)
-        axios.get('http://0.0.0.0:8000/api/doctor/clients/', { headers: { Authorization: access_token }})
-        .then(response => {
-          const res = response.data.message.map((val) => {
-            return {id: val.client_id, client: val.client}
-          });
-          this.setState({clients: res}) 
-        })
-    }
+    // clients = () => {
+    //     const access_token = 'Bearer '.concat(this.state.token)
+    //     axios.get('http://0.0.0.0:8000/api/doctor/clients/', { headers: { Authorization: access_token }})
+    //     .then(response => {
+    //       console.log(response)
+    //       const res = response.data.results.map((val) => {
+    //         return {id: val.client_id, client: val.client}
+    //       });
+    //       console.log(res, 'res')
+    //       this.setState({clients: res}) 
+    //     })
+    // }
 
     handleClick = (e) => {
         this.props.dispatch(examID(e.currentTarget.dataset.id))
@@ -53,7 +57,7 @@ class DoctorDashboard extends Component {
 
     componentDidMount() {
         this.exams()
-        this.clients()
+        // this.clients()
     }
 
     render() {

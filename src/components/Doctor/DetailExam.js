@@ -20,12 +20,13 @@ const Detail = ({exam, status, handleStatus, statusValue, submitValue, handleSub
                     <div className="detail">   
                         <p>Client: {exam.client}</p>
                         <p>Speciality: {exam.speciality}</p>
-                        <p>Created: {new Intl.DateTimeFormat("en-GB", {
+                        {/* <p>Created: {new Intl.DateTimeFormat("en-GB", {
                             year: "numeric",
                             month: "long",
                             day: "2-digit"
                             }).format(new Date(exam.created))}
-                        </p>
+                        </p> */}
+                        <p>Created:{exam.created}</p>
                         <p>Subject: {exam.subject}</p>
                         <p>Status: {exam.status}</p>
                         {!(exam.status === 'Accepted') &&

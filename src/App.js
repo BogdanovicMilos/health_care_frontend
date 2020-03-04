@@ -15,6 +15,7 @@ import Login from './containers/Login/login';
 import Logout from './containers/Logout/logout';
 import ExamForm from './containers/Client/ExamForm';
 import CheckoutForm from './containers/Client/CheckoutForm';
+import RefundForm from './containers/Client/RefundForm';
 import Correspondence from './containers/Doctor/Correspondence';
 import DoctorMessage from './containers/Doctor/Message';
 import DoctorProfile from './containers/Doctor/Profile';
@@ -31,6 +32,7 @@ import subjectReducer from './reducers/subjectReducer';
 import specReducer from './reducers/specReducer';
 import examReducer from './reducers/examReducer';
 import clientReducer from './reducers/clientReducer';
+import priceReducer from './reducers/priceReducer';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { userLogin, userLoggedIn } from './actions/authActions';
 import 'react-notifications/lib/notifications.css';
@@ -49,7 +51,8 @@ class App extends Component {
       subjectReducer,
       specReducer,
       examReducer,
-      clientReducer
+      clientReducer,
+      priceReducer
     });
 
     const store = createStore(
@@ -116,6 +119,9 @@ class App extends Component {
                   <Route path="/initiate" exact component={ExamForm} />
                   <Elements>
                     <Route path="/checkout" exact component={CheckoutForm} />
+                  </Elements>
+                  <Elements>
+                    <Route path="/refund" exact component={RefundForm} />
                   </Elements>
                   <NotificationContainer />
                 </Router>

@@ -9,11 +9,11 @@ const Nav = ({ register, login, handleLogout, isLoggedIn, handleDashboardDoctor,
     let profileLink = null;
     const isDoctor = sessionStorage.getItem('is_doctor')
     if (isDoctor === 'true') {
-        dashboardLink = <Link to="/dashboard-doctor" classNane="doc-dash" onClick={() => handleDashboardDoctor}>Dashboard</Link>;
-        profileLink = <Link to="/doctor/profile" classNane="doc-profile" onClick={handleDoctorProfile}>Profile</Link>;
+        dashboardLink = <Link to="/dashboard-doctor" className="dash" onClick={() => handleDashboardDoctor}>Dashboard</Link>;
+        profileLink = <Link to="/doctor/profile" className="profile" onClick={handleDoctorProfile}>Profile</Link>;
     } else {
-        dashboardLink = <Link to="/dashboard-client" classNane="cli-dash" onClick={() => handleDashboardClient}>Dashboard</Link>;
-        profileLink = <Link to="/client/profile" classNane="cli-profile" onClick={handleClientProfile}>Profile</Link>;
+        dashboardLink = <Link to="/dashboard-client" className="dash" onClick={() => handleDashboardClient}>Dashboard</Link>;
+        profileLink = <Link to="/client/profile" className="profile" onClick={handleClientProfile}>Profile</Link>;
     }
     return (
         <nav className="nav">        
@@ -25,9 +25,9 @@ const Nav = ({ register, login, handleLogout, isLoggedIn, handleDashboardDoctor,
             }
             {isLoggedIn && 
             <ul className="nav navbar-nav navbar-right">
-                <li>{dashboardLink}</li>
-                <li>{profileLink}</li>
-                <li><Link to="/logout" onClick={handleLogout}>Logout</Link></li>
+                <li className="li-dash">{dashboardLink}</li>
+                <li className="li-prof">{profileLink}</li>
+                <li className="li-logout"><Link to="/logout" onClick={handleLogout} className="logout">Logout</Link></li>
             </ul>    
             }
         </nav>

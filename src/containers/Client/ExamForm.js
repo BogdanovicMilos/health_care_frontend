@@ -4,7 +4,7 @@ import InitiateExam from '../../components/Client/ExamForm';
 import Nav from '../../components/Main/Navbar';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { doctor } from '../../actions/examActions';
+import { doctor, spec } from '../../actions/examActions';
 
 
 class ExamForm extends Component {
@@ -20,25 +20,32 @@ class ExamForm extends Component {
       submitted: false,
       price: null,
       doctor_id: null,
+      specs: [],
       token: sessionStorage.getItem('accessToken')
     };
   }
 
   handleSpeciality = (e) => {
-    console.log(e);
+    console.log(e.label, 'val');
     
-    const filteredDoctors = this.state.doctors.filter((doctor) => doctor.spec === e.label);
-    this.setState({
-      specialities: e.value,
-      doctors: filteredDoctors,
-    });
+    if(!this.state.specs.includes(e.label)){
+      console.log('prazno')
+      this.setState({
+        filtered: this.filteredDoctors,
+      });
+    } else {
+      const filteredDoctors = this.state.doctors.filter((doctor) => doctor.spec === e.label);
+      console.log(filteredDoctors, 'gs');
+      this.setState({
+        filtered: filteredDoctors,
+      });
+    }
   }
 
   handleDoctor = (e) => {
-    console.log(e, 'doca');
-    this.setState({doctors: e.value})
     this.setState({doctor_id: e.iD})
     this.props.dispatch(doctor(e))
+
   }
 
   handleSubject = (e) => {
@@ -48,7 +55,6 @@ class ExamForm extends Component {
   handleMessage = (e) => {
     this.setState({message: e.target.value});
   }
-
 
   handleSubmit = async () => {
     const access_token = 'Bearer '.concat(this.state.token)
@@ -90,8 +96,14 @@ class ExamForm extends Component {
         const res = response.data.message.map((val) => {
           return {value: val.id, iD: val.doctor_id, label: val.doctor, spec: val.speciality, price: val.price}
         });
-        console.log(res, 'response')
-        this.setState({ doctors: res });
+        const speciality = response.data.message.map((spec) => {
+          return {spec: spec.speciality}
+        })
+        const s = speciality.map((s) => s.spec)
+        this.setState({ 
+          doctors: res,
+          specs: s
+         });
       })
   }
 
@@ -103,7 +115,7 @@ class ExamForm extends Component {
         <Nav />
         <InitiateExam
           specialities={this.state.specialities}
-          doctors={this.state.doctors}
+          filtered={this.state.filtered}
           subject={this.state.subject}
           message={this.state.message}
           submitted={this.state.submitted}

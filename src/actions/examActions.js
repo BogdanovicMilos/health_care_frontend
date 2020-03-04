@@ -1,5 +1,5 @@
 import {
-    SPEC_OBJ, DOCTOR_OBJ, SUBJECT, EXAM_ID
+    SPEC_OBJ, DOCTOR_OBJ, SUBJECT, EXAM_ID, PRICE
 } from '../constants/examConstants';
 
 export function doctor(doctor) {
@@ -27,5 +27,12 @@ export function examID(exam) {
     return {
         type: EXAM_ID,
         exam
+    };
+}
+
+export function price(price) {
+    return {
+        type: PRICE,
+        price
     };
 }

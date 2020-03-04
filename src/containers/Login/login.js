@@ -30,7 +30,7 @@ class Login extends Component {
     }
 
     userLogin = async () => {
-        const data = await fetch('http://0.0.0.0:8000/api/auth/login/', {
+        const data = await fetch('http://127.0.0.1:8000/api/auth/login/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -42,12 +42,13 @@ class Login extends Component {
         });
 
         const jsonData = await data.json();
+        console.log(jsonData, 'data')
         if (jsonData.is_doctor){
             this.setState({is_doctor: true});
         }else{
             this.setState({is_doctor: false});
         }
-        this.props.dispatch(userLogin(jsonData.data));
+        this.props.dispatch(userLogin(jsonData.data.data));
         if (jsonData.data.access_token) {
             sessionStorage.setItem('accessToken', jsonData.data.access_token)
             sessionStorage.setItem('expiresIn', jsonData.data.expires_in)
