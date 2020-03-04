@@ -23,7 +23,7 @@ class ClientProfile extends Component {
     e.preventDefault();
     const access_token = "Bearer ".concat(this.state.token);
     const data = await fetch(
-      "https://health-care-backend.herokuapp.com/api/client/profile/",
+      "http://127.0.0.1:8000/api/client/profile/",
       {
         method: "PUT",
         headers: {
@@ -44,7 +44,7 @@ class ClientProfile extends Component {
   handleClientProfile = async () => {
     const access_token = "Bearer ".concat(this.state.token);
     axios
-      .get(`https://health-care-backend.herokuapp.com/api/client/profile/`, {
+      .get(`http://127.0.0.1:8000/api/client/profile/`, {
         headers: { Authorization: access_token }
       })
       .then(response => {
@@ -57,7 +57,7 @@ class ClientProfile extends Component {
   record = async () => {
     const access_token = "Bearer ".concat(this.state.token);
     axios
-      .get(`https://health-care-backend.herokuapp.com/api/client/records/`, {
+      .get(`http://127.0.0.1:8000api/client/records/`, {
         headers: { Authorization: access_token }
       })
       .then(response => {

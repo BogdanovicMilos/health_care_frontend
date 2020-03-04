@@ -37,7 +37,7 @@ export class DoctorsClients extends Component {
     const access_token = "Bearer ".concat(this.state.token);
 
     axios
-      .get("https://health-care-backend.herokuapp.com/api/doctor/clients/", {
+      .get("http://127.0.0.1:8000/api/doctor/clients/", {
         headers: { Authorization: access_token }
       })
       .then(response => {

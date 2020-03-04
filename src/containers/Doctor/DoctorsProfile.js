@@ -17,7 +17,7 @@ class DoctorProfile extends Component {
     const access_token = "Bearer ".concat(this.state.token);
     axios
       .get(
-        `https://health-care-backend.herokuapp.com/api/client/doc/${this.state.id}`,
+        `http://127.0.0.1:8000/api/client/doc/${this.state.id}`,
         {
           headers: { Authorization: access_token }
         }

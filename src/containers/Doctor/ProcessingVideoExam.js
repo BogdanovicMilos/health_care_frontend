@@ -19,7 +19,7 @@ class ProcessingVideoExam extends Component {
   detail = id => {
     const access_token = "Bearer ".concat(this.state.token);
     axios
-      .get(`https://health-care-backend.herokuapp.com/api/queue/detail/${id}`, {
+      .get(`http://127.0.0.1:8000/api/queue/detail/${id}`, {
         headers: { Authorization: access_token }
       })
       .then(response => {
@@ -70,7 +70,7 @@ class ProcessingVideoExam extends Component {
         //   var yourMessage = document.getElementById("yourMessage").value;
         //   peer.send(yourMessage);
         // });
-        const connection = new WebSocket("ws://localhost:8080");
+        const connection = new WebSocket("ws://127.0.0.1:8000/ws/video/");
 
         connection.onopen = () => {
           console.log("connected");

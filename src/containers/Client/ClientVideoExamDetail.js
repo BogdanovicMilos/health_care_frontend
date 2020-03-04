@@ -18,7 +18,7 @@ class ClientVideoExamDetail extends Component {
     this.props.history.push("/dashboard-client");
     const access_token = "Bearer ".concat(this.state.token);
     const doctor = await fetch(
-      `https://health-care-backend.herokuapp.com/api/web/client/${this.state.id}/`,
+      `http://127.0.0.1:8000/api/web/client/${this.state.id}/`,
       {
         method: "PUT",
         headers: {
@@ -41,7 +41,7 @@ class ClientVideoExamDetail extends Component {
     const access_token = "Bearer ".concat(this.state.token);
     axios
       .get(
-        `https://health-care-backend.herokuapp.com/api/web/client/${this.state.id}/`,
+        `http://127.0.0.1:8000/api/web/client/${this.state.id}/`,
         {
           headers: { Authorization: access_token }
         }

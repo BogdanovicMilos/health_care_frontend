@@ -55,7 +55,7 @@ class ClientDashboard extends Component {
 
   connect = () => {
     var ws = new WebSocket(
-      "wss://health-care-backend.herokuapp.com/ws/exam/status/"
+      "wss://127.0.0.1:8000/ws/exam/status/"
     );
     let that = this;
     var connectInterval;
@@ -130,7 +130,7 @@ class ClientDashboard extends Component {
   videoReqStatus = async () => {
     const access_token = "Bearer ".concat(this.state.token);
     axios
-      .get(`https://health-care-backend.herokuapp.com/api/web/client/list/`, {
+      .get(`http://127.0.0.1:8000/api/web/client/list/`, {
         headers: { Authorization: access_token }
       })
       .then(response => {
@@ -146,7 +146,7 @@ class ClientDashboard extends Component {
   paginatedExams = async () => {
     const access_token = "Bearer ".concat(this.state.token);
     axios
-      .get(`https://health-care-backend.herokuapp.com/api/mail/client/`, {
+      .get(`http://127.0.0.1:8000/api/mail/client/`, {
         headers: { Authorization: access_token }
       })
       .then(response => {

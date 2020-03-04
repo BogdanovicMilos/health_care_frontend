@@ -20,7 +20,7 @@ class Correspondence extends Component {
     const access_token = "Bearer ".concat(this.state.token);
     axios
       .get(
-        `https://health-care-backend.herokuapp.com/api/doctor/exams/${this.state.id}/messages`,
+        `http://127.0.0.1:8000/api/doctor/exams/${this.state.id}/messages`,
         {
           headers: { Authorization: access_token }
         }

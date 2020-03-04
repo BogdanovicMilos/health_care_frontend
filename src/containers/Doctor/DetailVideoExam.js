@@ -23,7 +23,7 @@ class DetailVideoExam extends Component {
   detail = id => {
     const access_token = "Bearer ".concat(this.state.token);
     axios
-      .get(`https://health-care-backend.herokuapp.com/api/web/doctor/${id}`, {
+      .get(`http://127.0.0.1:8000/api/web/doctor/${id}`, {
         headers: { Authorization: access_token }
       })
       .then(response => {
@@ -62,7 +62,7 @@ class DetailVideoExam extends Component {
   doctorExam = async id => {
     const access_token = "Bearer ".concat(this.state.token);
     const client = await fetch(
-      `https://health-care-backend.herokuapp.com/api/web/doctor/${id}/`,
+      `http://127.0.0.1:8000/api/web/doctor/${id}/`,
       {
         method: "PUT",
         headers: {

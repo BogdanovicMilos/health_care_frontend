@@ -43,7 +43,7 @@ class Main extends Component {
 
   componentDidMount() {
     axios
-      .get("https://health-care-backend.herokuapp.com/api/doctor/list", {
+      .get("http://127.0.0.1:8000/api/doctor/list", {
         headers: { Authorization: access_token }
       })
       .then(response => {
@@ -59,7 +59,7 @@ class Main extends Component {
         this.setState({ doctors: res });
       });
     axios
-      .get("https://health-care-backend.herokuapp.com/api/specialities/", {
+      .get("http://127.0.0.1:8000/api/specialities/", {
         headers: { Authorization: access_token }
       })
       .then(response => {

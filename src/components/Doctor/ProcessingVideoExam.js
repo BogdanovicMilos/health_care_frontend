@@ -46,9 +46,14 @@ const Processing = ({ exam, handleConnect, connected, handleVideoStart }) => (
       );
     })}
     {exam.map(exam => {
+      console.log(exam, 'not');
+      console.log(exam.record, 'record');
+      
+      
       let filtered = exam.record.report.filter(filexam => {
         return filexam.spec_name === exam.exam.speciality;
       });
+      console.log(filtered, 'filt');
       return (
         <div key={filtered[0].id} className="report">
           <div className="report-details">

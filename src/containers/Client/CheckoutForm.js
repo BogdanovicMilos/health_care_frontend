@@ -24,7 +24,7 @@ class CheckoutForm extends Component {
       NotificationManager.error("Faild to Checkout", "Faild!", 2000);
     } else if (paymentMethod !== undefined) {
       const response = await fetch(
-        "https://health-care-backend.herokuapp.com/api/charge/",
+        "http://127.0.0.1:8000/api/charge/",
         {
           method: "POST",
           headers: {
